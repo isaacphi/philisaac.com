@@ -1,0 +1,69 @@
+{% extends "base_project.html" %}
+{% load staticfiles %}
+
+{% block top %}
+
+<span class="project-section-title highlight highlight">&nbsp;<a href="/">HOME</a>/WHITEBOARD PRINTER&nbsp;</span>
+
+<div id="project-top">		
+
+	<div class="top-img-container">
+		<div class="project-section-header">
+			<img class="project-top-cover" src="{% static 'mysite/projects/whiteboard.jpg' %}" width="400">
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}
+
+{% block main %}
+
+<div class="center-text">
+
+	<img src="{% static 'mysite/projects/whiteboard.png' %}" id="project-pic" class="section-pic" />
+
+	<div class="header highlight">
+		What's this?
+	</div>
+
+	<div class="text highlight">
+		My old apartment had a full wall whiteboard. I had some spare robotics parts lying around at the time so I thought I’d try to build something fun.
+	</div>
+
+	<div class="text highlight">
+		The printer consists of two stepper motors at the top two corners of your drawing surface connected by spools to a marker in the middle. By carefully controlling how the motors spin, you can move the marker around the board and draw. An arduino accepts commands from a python program and drives the steppers though a stepper driver circuit.
+	</div>
+
+	<div class="text highlight">
+		I wrote two python programs for the printer. The first simply typed text and the second converted a bitmap image to a sequence of lines that could print out an approximation of the picture. This involved a mixture of edge detection and density detection.
+	</div>
+
+
+</div>
+
+<div class="full-width">
+	<div class="full-width-pic-container">
+		<img src="{% static 'mysite/projects/monroe.jpg' %}" class="full-width-pic" />
+	</div>
+	<div class="caption highlight">
+		Printing a classic portrait of Marilyn Monroe.
+	</div>
+
+		<div class="full-width-pic-container">
+		<img src="{% static 'mysite/projects/sunrise.jpg' %}" class="full-width-pic" />
+	</div>
+	<div class="caption highlight">
+		Sunrise by Roy Lichtenstein. Replicated in the cover photo of this page.
+	</div>
+</div>
+
+<div class="center-text">
+
+	<div class="text highlight">
+		Future iterations could have the ability to lift the marker up from the board. I am also considering building a much larger scale version that can create murals.
+	</div>
+
+</div>
+
+{% endblock %}

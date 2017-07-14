@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block main %}
+
+<div class="center-text">
+
+	<img src="{% static 'mysite/psi_mug.png' %}" id="home-pic" class="section-pic" />
+
+	<div class="header highlight">
+		Hi there
+	</div>
+
+	<div class="text highlight">
+		My name is Phil Isaac and this is my website.
+	</div>
+
+	<div class="text highlight">
+		A little bit about myself: I am just finishing up studying engineering physics at the University of Toronto and co-running a startup company called PheedLoop, also in Toronto.
+	</div>
+
+	<div class="text highlight">
+		I spent a few years living in Vancouver a while ago and can't wait to move back. In my spare time I tend to build things with software and hardware, play ultimate frisbee, bike around, read stuff, cook, and homebrew.
+	</div>
+
+	<div class="text highlight">
+		I made this site because there are a few projects that I wanted to get online. Many of these projects are still in developement but you can check out how they're coming along below. If you think anything is cool and are interested in collaborating, <a class="highlight" href="#contact-pic">get in touch</a>.
+	</div>
+
+</div>
+
+<div id="projects">		
+
+	<img src="{% static 'mysite/projects.png' %}" id="projects-pic" class="section-pic" />
+
+	<div class="header highlight">
+		Projects
+	</div>
+
+	<div class="project">
+		<a href="project/vrui">
+			<img class="project-cover" src="{% static 'mysite/projects/AR_demo2.png' %}" width="400">
+			<span class="project-text highlight">// FREEHAND&nbsp;</span>
+		</a>
+	</div>
+
+	<div class="project">
+		<a href="project/squareface">
+			<img class="project-cover" src="{% static 'mysite/projects/squareface.png' %}" width="400">
+			<span class="project-text highlight">// SQUAREFACE&nbsp;</span>
+		</a>
+	</div>
+
+	<div class="project">
+		<a href="project/whiteboard">
+			<img class="project-cover" src="{% static 'mysite/projects/whiteboard.jpg' %}" width="400">
+			<span class="project-text highlight">// WHITEBOARD PRINTER&nbsp;</span>
+		</a>
+	</div>
+
+	<div class="project">
+		<a href="project/motion">
+			<img class="project-cover" src="{% static 'mysite/projects/cars.png' %}" width="400">
+			<span class="project-text highlight">// MOTION TRACKING&nbsp;</span>
+		</a>
+	</div>
+
+	<div class="project">
+		<a href="project/forevernuts">
+			<img class="project-cover" src="{% static 'mysite/projects/nuts.jpg' %}" width="400">
+			<span class="project-text highlight">// GUITAR PEDAL&nbsp;</span>
+		</a>
+	</div>
+
+	<div class="project">
+		<a href="project/plp">
+			<img class="project-cover" src="{% static 'mysite/projects/pheedloop_logo.png' %}" width="400">
+			<span class="project-text highlight">// PHEEDLOOP&nbsp;</span>
+		</a>
+	</div>
+
+	<div class="project">
+		<a href="project/planter">
+			<img class="project-cover" src="{% static 'mysite/projects/PlanterPoster.png' %}" width="400">
+			<span class="project-text highlight">// URBAN PLANTER&nbsp;</span>
+		</a>
+	</div>	
+
+	<div class="project">
+		<a href="project/a4h">
+			<img class="project-cover" src="{% static 'mysite/projects/a4h.jpg' %}" width="400">
+			<span class="project-text highlight">// MICROGRAVITY EXPERIMENTS&nbsp;</span>
+		</a>
+	</div>
+
+	<div class="project">
+		<a href="project/balle">
+			<img class="project-cover" src="{% static 'mysite/projects/balle.jpg' %}" width="400">
+			<span class="project-text highlight">// BALL SORTING ROBOT&nbsp;</span>
+		</a>
+	</div>
+
+	<div class="project">
+		<a href="project/clock">
+			<img class="project-cover" src="{% static 'mysite/projects/clock.jpg' %}" width="400">
+			<span class="project-text highlight">// MECHANICAL CLOCK DESIGN&nbsp;</span>
+		</a>
+	</div>
+
+	<div class="project">
+		<a href="project/grabbot">
+			<img class="project-cover" src="{% static 'mysite/projects/grabbot.jpg' %}" width="400">
+			<span class="project-text highlight">// GRAB BOT&nbsp;</span>
+		</a>
+	</div>
+
+</div>
+
+<div class="center-text">
+
+	<img src="{% static 'mysite/contact.png' %}" id="contact-pic" class="section-pic" />
+
+	<div class="header highlight">
+		Contact
+	</div>
+
+	<div class="text highlight">
+		In the mean time, you can click the links below to learn more than you ever wanted to know about me. <span class="highlight" style="text-decoration:underline">phil@philisaac.com</span>
+	</div>
+
+	<br/>
+
+	<div class="highlight">
+		<a href="mailto:phil@philisaac.com"><i class="fa fa-envelope-o fa-2x"></i></a>&nbsp;&nbsp;
+		<a href="https://twitter.com/isaacphil"><i class="fa fa-twitter fa-2x"></i></a>&nbsp;&nbsp;
+		<a href="https://soundcloud.com/goodresonance"><i class="fa fa-soundcloud fa-2x"></i></a>&nbsp;&nbsp;
+		<a href="https://www.facebook.com/isaac.phil"><i class="fa fa-facebook-official fa-2x"></i></a>&nbsp;&nbsp;
+		<a href="https://www.goodreads.com/user/show/44129350-phil"><i class="fa fa-book fa-2x"></i></a>&nbsp;&nbsp;
+		<a href="https://plus.google.com/+PhilipIsaac93"><i class="fa fa-google-plus fa-2x"></i></a>&nbsp;&nbsp;
+		<a href="https://medium.com/@isaacphil"><i class="fa fa-medium fa-2x"></i></a>&nbsp;&nbsp;
+		<a href="https://getpocket.com/users/*sso145136415437ac7c/feed/all"><i class="fa fa-get-pocket fa-2x"></i></a>&nbsp;&nbsp;
+		<a href="https://ca.linkedin.com/in/philisaac"><i class="fa fa-linkedin fa-2x"></i></a>&nbsp;&nbsp;
+		<a href="https://github.com/isaacphi"><i class="fa fa-github fa-2x"></i></a>
+	</div>
+
+	<br/><br/><br/><br/>
+	
+</div>
+
+
+
+{% endblock %}

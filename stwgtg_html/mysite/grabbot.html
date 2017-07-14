@@ -1,0 +1,71 @@
+{% extends "base_project.html" %}
+{% load staticfiles %}
+
+{% block top %}
+
+<span class="project-section-title highlight highlight">&nbsp;<a href="/">HOME</a>/GRAB BOT&nbsp;</span>
+
+<div id="project-top">		
+
+	<div class="top-img-container">
+		<div class="project-section-header">
+			<img class="project-top-cover" src="{% static 'mysite/projects/grabbot.jpg' %}" width="400">
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}
+
+{% block main %}
+
+<div class="center-text">
+	<img src="{% static 'mysite/projects/grabbot.png' %}" id="project-pic" class="section-pic" />
+
+	<div class="header highlight">
+		A bot that grabs?
+	</div>
+
+	<div class="text highlight">
+		I entered a two day intensive robotics hackathon in winter 2014. We built a small robot where a claw was controlled with gesture recognition. It would mimic the movements of your hand and close its claw when you grabbed.
+	</div>
+
+</div>
+
+<div class="full-width">
+	<div class="full-width-pic-container">
+		<img src="{% static 'mysite/projects/grabbot_robot.jpg' %}" class="full-width-pic" />
+	</div>
+	<div class="caption highlight">
+		Photo of the robot
+	</div>
+</div>
+
+<div class="center-text">	
+
+	<div class="text highlight">
+		The robot consisted of servo motors controlled by an arduino, which recieved its commands from a python script over serial. A LeapMotion controller was used for gesture recognition.
+	</div>
+
+	<div class="header highlight">
+		video of a bot that grabs
+	</div>
+
+</div>
+
+<div class="full-width">
+	<iframe width="560" height="315" class="iframe-vid" src="https://www.youtube.com/embed/4F0AheIncPQ" frameborder="0" allowfullscreen></iframe>
+	<div class="caption highlight">
+		Grab bot in action
+	</div>
+</div>
+
+<div class="center-text">	
+
+	<div class="text highlight">
+		We ended up winning first place in technical innovation at the hackathon: <a href="https://getyourboton.com/2014/12/17/get-your-bot-on-2014-positronic-a-weekend-of-creativity-and-ingenuity/">article</a>.
+	</div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "base_project.html" %}
+{% load staticfiles %}
+
+{% block top %}
+
+<span class="project-section-title highlight highlight">&nbsp;<a href="/">HOME</a>/PHEEDLOOP&nbsp;</span>
+
+<div id="project-top">		
+
+	<div class="top-img-container">
+		<div class="project-section-header">
+			<img class="project-top-cover" src="{% static 'mysite/projects/pheedloop_logo.png' %}" width="400">
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}
+
+{% block main %}
+
+<div class="center-text">
+
+	<img src="{% static 'mysite/projects/plp.png' %}" id="project-pic" class="section-pic" />
+
+	<div class="header highlight">
+		What's a pheedloop?
+	</div>
+
+	<div class="text highlight">
+		PheedLoop is an engagement and interaction tool for conferences and events. Attendees can sign in to message others at the event, answer live polls, ask questions to the speakers, and much more.
+	</div>
+
+	<div class="text highlight">
+		Here's a link: <a href="http://www.pheedloop.com">PheedLoop</a>
+	</div>
+
+	<div class="text highlight">
+		PheedLoop is a startup company that I co-founded with Rahul Goel through the University of Toronto Hatchery. Since then, we have gone on to the DMZ, Canada’s premier startup incubator, and grown our team.
+	</div>
+
+</div>
+
+{% endblock %}

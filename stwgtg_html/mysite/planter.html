@@ -1,0 +1,62 @@
+{% extends "base_project.html" %}
+{% load staticfiles %}
+
+{% block top %}
+
+<span class="project-section-title highlight highlight">&nbsp;<a href="/">HOME</a>/URBAN PLANTER&nbsp;</span>
+
+<div id="project-top">		
+
+	<div class="top-img-container">
+		<div class="project-section-header">
+			<img class="project-top-cover" src="{% static 'mysite/projects/PlanterPoster.png' %}" width="400">
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}
+
+{% block main %}
+
+<div class="center-text">
+
+	<br/>
+	<img src="{% static 'mysite/projects/planter.png' %}" id="project-pic" class="section-pic" />
+
+	<div class="header highlight">
+		Gardening for everybody
+	</div>
+
+	<div class="text highlight">
+		The poster above is for a planter I designed for urban gardening with a group of peers for a design course at U of T. It was made for <a href="http://tppgta.blogspot.ca/">The Permaculture Project GTA</a> (TPPGTA).
+	</div>
+
+</div>
+
+<div class="full-width">
+	
+	<div class="full-width-pic-container">
+		<img src="{% static 'mysite/projects/PlanterPoster1.png' %}" class="full-width-pic" />
+	</div>
+	<div class="caption highlight">
+		Poster demonstrating the urban planter concept.
+	</div>
+
+	<div class="full-width-pic-container">
+		<img src="{% static 'mysite/projects/planter_build.jpg' %}" class="full-width-pic" />
+	</div>
+	<div class="caption highlight">
+		A working prototype of our rooftop planter design.
+	</div>
+</div>
+
+<div class="center-text">	
+
+	<div class="text highlight">
+		The planter is designed to be used on urban rooftops, which go mostly unutilized in urban environments. It features an easy irrigation system and shelters plants in order to extend the viable growing season. The aim was to provide a productive use for urban rooftops and make alternative food sources more accessible.
+	</div>
+
+</div>
+
+{% endblock %}
