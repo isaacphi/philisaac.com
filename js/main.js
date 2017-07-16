@@ -1,25 +1,20 @@
 // ONLOAD
 $(function () {
-	// Set min container height
-	//$('#main').css({'min-height': $(window).height() } );
-	// Set the height of the div with the "/'s"
-	var mainHeight = parseFloat($('#main').css('height')) + 60;
-    var projHeight = parseFloat($('#project-top').css('height')) + mainHeight;
-	$('.slashes').css({'height': mainHeight});
-    $('.project-slashes').css({'height': projHeight });
-    
+		// Set min container height
+		//$('#main').css({'min-height': $(window).height() } );
+		// Set the height of the div with the "/'s"
+		var mainHeight = parseFloat($('#main').css('height')) + 60;
+  	var projHeight = parseFloat($('#project-top').css('height')) + mainHeight;
+		//$('.slashes').css({'height': mainHeight});
+    //$('.project-slashes').css({'height': projHeight });
+
     // Populate slashes
     $('.slashes').each(
         function() {
             $(this).html('<span class="hover-colour">/</span>'.repeat(5000));
         }
     );
-    $('.project-slashes').each(
-        function() {
-            $(this).html('<span class="hover-colour">/</span>'.repeat(5000));
-        }
-    );
-    
+
     // Set a random colour when you hover over something
     $('.hover-colour').each(
         function () {
@@ -48,7 +43,7 @@ $(function () {
         function() { startChangingColor(this); },
         function() { stopChangingColor(this); }
     );
-    
+
 
     // Hover over project
     $(".project-cover").hover(
@@ -68,8 +63,6 @@ $(function () {
     var projHeight = parseFloat($('#project-top').css('height')) + mainHeight;
     $('.slashes').css({'height': mainHeight});
     $('.project-slashes').css({'height': projHeight });
-    
-
 
 });
 
@@ -116,7 +109,7 @@ function changeColor(identifier) {
         r = 255;
         del_r = -5;
     }
-    if (r < 0) { 
+    if (r < 0) {
         r = 0;
         del_r = 5;
     }
@@ -125,9 +118,9 @@ function changeColor(identifier) {
         del_g = -5;
     }
     if (g < 0) {
-        g = 0; 
+        g = 0;
         del_g = 5;
-    }    
+    }
     if (b > 255) {
         b = 255;
         del_b = -5;
@@ -135,7 +128,7 @@ function changeColor(identifier) {
     if (b < 0) {
         b = 0;
         del_b = 5;
-    }    
+    }
     /*
     console.log(r);
     console.log(g);

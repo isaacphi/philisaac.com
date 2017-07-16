@@ -1,82 +1,3 @@
-body {
-	padding: 0;
-	margin: 0;
-}
-
-/* Slashes that fill up the sides */
-.slashes {
-	position: absolute;
-
-	font-size: 2.2em;
-	color: #ddd;
-	font-family: 'Source Code Pro', monospace;
-	word-wrap: break-word;
-	position: absolute;*/
-
-	/* No select */ 
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	cursor: default;
-
-	z-index: 1;
-	overflow: hidden;
-
-	width: 50%;
-}
-
-.project-slashes {
-	position: absolute;
-
-	font-size: 2.2em;
-	color: #ddd;
-	font-family: 'Source Code Pro', monospace;
-	word-wrap: break-word;
-	position: absolute;*/
-
-	/* No select */ 
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	cursor: default;
-
-	z-index: 1;
-	overflow: hidden;
-
-	width: 50%;
-	top: 24em;
-}
-
-/* Three columns on home page */
-#left {
-	left: 0;
-	top: 0;
-	text-align: right;
-}
-
-#right {
-	right: 0;
-	top: 0;
-}
-
-#main {
-	width: 50%;
-	margin: 0 auto;
-	/*padding: 0 10% 0 10%;*/
-	font-family: 'Source Sans Pro', sans-serif;
-	color: #444;
-	font-size: 1.1em;
-	background-color: white;
-	z-index: 2;
-	position: relative;
-	text-align: center;
-}
 
 .center-text {
 	width: 500px;
@@ -115,7 +36,7 @@ a::-moz-selection {
 	font-size: 1.1em;
 	z-index: 2;
 	position: relative;
-	text-align: center;	
+	text-align: center;
 }
 
 .project {
@@ -145,7 +66,7 @@ a::-moz-selection {
 	font-size: 1.1em;
 	z-index: 2;
 	position: relative;
-	text-align: center;	
+	text-align: center;
 }
 
 .full-width-pic-container {
@@ -155,14 +76,14 @@ a::-moz-selection {
     border-width: 10 0 10 0;
     border-color: #444;
     margin-bottom: 1.1em;
-    position: relative;	
+    position: relative;
 }
 
 .top-img-container {
 	position: relative;
 	background-color: white;
 	height: 24em;
-	overflow: hidden;	
+	overflow: hidden;
 	z-index: 2;
 }
 
@@ -184,7 +105,7 @@ a::-moz-selection {
 	font-size: 1.1em;
 	z-index: 2;
 	position: relative;
-	text-align: center;	
+	text-align: center;
 }
 
 img.project-top-cover {
@@ -303,4 +224,3 @@ img.project-cover:hover {
 .fa-get-pocket:hover {color: #ee4e62;}
 .fa-linkedin:hover {color: #1c87bd;}
 .fa-github:hover {color: #666;}
-

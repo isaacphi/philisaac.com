@@ -1,5 +1,76 @@
 ---
 ---
 
-p
-  font-size: 300%
+// variables
+
+$title-font: "komika hand", sans-serif
+$body-font: "source sans light", sans-serif
+$code-font: "source code light", monospace
+
+$slash-color: #ddd
+$font-color: #444
+
+// fonts
+
+@font-face
+  font-family: "source sans light"
+  src: url(/fonts/source-sans-pro/SourceSansPro-Light.otf)
+
+@font-face
+  font-family: "komika hand"
+  src: url(/fonts/Komika-Hand/Komika_Hand.ttf)
+
+@font-face
+  font-family: "source code light"
+  src: url(/fonts/source-code-pro/SourceCodePro-Light.otf)
+
+// base template css
+
+body
+  margin: 0
+  padding: 0
+  height: 100%
+
+#left
+  left: 0
+  top: 0
+  text-align: right
+
+#right
+  right: 0
+  top: 0
+
+#main
+  width: 50%
+  min-height: 90%
+  margin: 0 auto
+  z-index: 2
+  position: relative
+  top: 0
+  font-family: $body-font
+  color: $font-color
+  background-color: white
+  text-align: center
+
+// includes
+
+.slashes
+  position: absolute
+  z-index: 1
+  overflow: hidden
+  width: 50%
+  min-height: 100%
+  font-size: 2.2em
+  line-height: 95%
+  letter-spacing: -30%
+  color: $slash-color
+  font-family: $code-font
+  word-wrap: break-word
+  cursor: default
+  // no select
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
