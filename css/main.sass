@@ -10,6 +10,8 @@ $code-font: "source code light", monospace
 $slash-color: #ddd
 $font-color: #444
 
+$margin-height: 40px
+
 // fonts
 
 @font-face
@@ -46,11 +48,59 @@ body
   margin: 0 auto
   z-index: 2
   position: relative
-  top: 0
   font-family: $body-font
   color: $font-color
   background-color: white
   text-align: center
+
+// styling for pages
+
+// headers
+
+.header-picture
+  margin-top: $margin-height
+  width: 10em
+  background-color: $font-color
+
+.header-title
+  font-family: $title-font
+  font-size: 2em
+
+// nav
+
+.top-squiggles
+  margin-top: $margin-height
+
+.squiggle
+  position: relative
+  top: 8px
+  font-family: $title-font
+  letter-spacing: 10px
+  font-size: 2.3em
+
+.nav-links
+  font-family: $title-font
+  font-size: 1em
+
+.nav-item
+  display: inline-block
+  padding: 0 20px
+//  text-decoration: underline
+
+// content
+
+.text
+  position: relative
+  width: 80%
+  left: 10%
+  margin-top: $margin-height
+  font-size: 1.1em
+  word-spacing: 110%
+  text-align: left
+
+p
+  margin: 7px 0
+
 
 // includes
 
