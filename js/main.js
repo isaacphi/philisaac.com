@@ -1,12 +1,5 @@
 // ONLOAD
 $(function () {
-		// Set min container height
-		//$('#main').css({'min-height': $(window).height() } );
-		// Set the height of the div with the "/'s"
-		var mainHeight = parseFloat($('#main').css('height')) + 60;
-  	var projHeight = parseFloat($('#project-top').css('height')) + mainHeight;
-		//$('.slashes').css({'height': mainHeight});
-    //$('.project-slashes').css({'height': projHeight });
 
     // Populate slashes
     $('.slashes').each(
@@ -27,23 +20,93 @@ $(function () {
     );
 
     // cycle color of headers
-    $("#home-pic").hover(
-        function() { startChangingColor(this); },
-        function() { stopChangingColor(this); }
-    );
-    $("#projects-pic").hover(
-        function() { startChangingColor(this); },
-        function() { stopChangingColor(this); }
-    );
-    $("#contact-pic").hover(
-        function() { startChangingColor(this); },
-        function() { stopChangingColor(this); }
-    );
-    $("#project-pic").hover(
-        function() { startChangingColor(this); },
-        function() { stopChangingColor(this); }
-    );
+		$(".header-picture").each(
+			function () {
+				var timer; // used to continuously cycle color until mouse leaves
+				var id = '#' + this.id;
+				var title_id = '#' + $(this).next().attr('id');
+				// generate a random 'direction' in color space to cycle colors
+				var direction = new Array(3);
+				del_r = Math.random();
+				del_g = Math.random();
+				del_b = Math.random();
+				total = del_r + del_g + del_b;
+				direction[0] = Math.floor(del_r * (10/total));
+				direction[1] = Math.floor(del_g * (10/total));
+				direction[2] = Math.floor(del_b * (10/total));
 
+				$(this).hover(
+					// on hover start
+					function () {
+				    // Get base 10 numbers for r/g/b from colour string
+				    var oldColorString = $(id).css('background-color').split(",");
+				    var r = parseInt(oldColorString[0].split("(")[1]);
+				    var g = parseInt(oldColorString[1]);
+				    var b = parseInt(oldColorString[2].split(")")[0]);
+						var r_str, g_str, b_str, color
+						// this will be called after every interval while in hover
+				    timer = setInterval(
+			        function() {
+						    // Change the color
+						    r += direction[0];
+						    g += direction[1];
+						    b += direction[2];
+
+								// handle overflow
+						    if (r > 255) {
+						        r = 255;
+										direction[0] = -direction[0];
+						    }
+								if (r < 0) {
+						        r = 0;
+										direction[0] = -direction[0];
+						    }
+						    if (g > 255) {
+						        g = 255;
+										direction[1] = -direction[1];
+						    }
+						    if (g < 0) {
+						        g = 0;
+										direction[1] = -direction[1];
+						    }
+						    if (b > 255) {
+						        b = 255;
+										direction[2] = -direction[2];
+						    }
+						    if (b < 0) {
+						        b = 0;
+										direction[2] = -direction[2];
+						    }
+
+						    // Convert numbers back into a hex color string and set color
+								r_str = r.toString(16);
+								if (r_str.length == 1) {
+									r_str = "0" + r_str
+								}
+								g_str = g.toString(16);
+								if (g_str.length == 1) {
+									g_str = "0" + g_str
+								}
+								b_str = b.toString(16);
+								if (b_str.length == 1) {
+									b_str = "0" + b_str
+								}
+						    color = '#' + r_str + g_str + b_str;
+								// set color
+						    $(id).css({ 'background-color': color });
+						    $(title_id).css({ 'color': color });								
+
+			        },
+			        50 // color rate change constant
+						)
+					},
+					// on hover end
+					function () {
+						clearInterval(timer);
+					}
+				)
+			}
+		);
 
     // Hover over project
     $(".project-cover").hover(
@@ -58,15 +121,9 @@ $(function () {
         }
     );
 
-    // Set the height of the div with the "/'s"
-    var mainHeight = parseFloat($('#main').css('height')) + 60;
-    var projHeight = parseFloat($('#project-top').css('height')) + mainHeight;
-    $('.slashes').css({'height': mainHeight});
-    $('.project-slashes').css({'height': projHeight });
-
 });
 
-// Returns random colour string
+// Returns random colour string in the format "#xxxxxx"
 function getRandomColour() {
     // characers used in hex colour schemes
     var letters = '0123456789ABCDEF'.split('');
@@ -76,82 +133,6 @@ function getRandomColour() {
         color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
-}
-
-// Cycle icon colour randomly on hover
-var del_r = 0;
-var del_g = 0;
-var del_b = 0;
-
-function changeColor(identifier) {
-    // Get base 10 numbers for r/g/b from colour string
-    var oldColorString = $(identifier).css('background-color').split(",");
-    var r = parseInt(oldColorString[0].split("(")[1]);
-    var g = parseInt(oldColorString[1]);
-    var b = parseInt(oldColorString[2].split(")")[0]);
-
-    // Change the direction of the color change vector
-    del_r += Math.floor(Math.random() * 10 - 5);
-    if (del_r > 20) { del_r = 20; }
-    if (del_r < -20) { del_r = -20; }
-    del_g += Math.floor(Math.random() * 10 - 5);
-    if (del_g > 20) { del_g = 20; }
-    if (del_g < -20) { del_g = -20; }
-    del_b += Math.floor(Math.random() * 10 - 5);
-    if (del_b > 20) { del_b = 20; }
-    if (del_b < -20) { del_b = -20; }
-
-    // Change the color
-    r += del_r;
-    g += del_g;
-    b += del_b;
-    if (r > 255) {
-        r = 255;
-        del_r = -5;
-    }
-    if (r < 0) {
-        r = 0;
-        del_r = 5;
-    }
-    if (g > 255) {
-        g = 255;
-        del_g = -5;
-    }
-    if (g < 0) {
-        g = 0;
-        del_g = 5;
-    }
-    if (b > 255) {
-        b = 255;
-        del_b = -5;
-    }
-    if (b < 0) {
-        b = 0;
-        del_b = 5;
-    }
-    /*
-    console.log(r);
-    console.log(g);
-    console.log(b);
-    */
-
-    // Convert numbers back into a hex color string
-    var color = '#' + r.toString(16) + g.toString(16) + b.toString(16);
-    $(identifier).css({ 'background-color': color });
-}
-
-var timer;
-function startChangingColor(thing) {
-    timer = setInterval(
-        function() {
-            changeColor('#' + thing.id);
-        },
-        55
-    );
-}
-
-function stopChangingColor(thing) {
-    clearInterval(timer);
 }
 
 // Smooth scrolling
