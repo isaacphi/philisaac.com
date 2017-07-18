@@ -16,7 +16,7 @@ $margin-height: 40px
 
 @font-face
   font-family: "source sans light"
-  src: url(/fonts/source-sans-pro/SourceSansPro-Light.otf)
+  src: url(/fonts/source-sans-pro/SourceSansPro-Regular.otf)
 
 @font-face
   font-family: "komika hand"
@@ -65,6 +65,7 @@ body
 .header-title
   font-family: $title-font
   font-size: 2em
+  margin-top: 5px
 
 // nav
 
@@ -85,7 +86,43 @@ body
 .nav-item
   display: inline-block
   padding: 0 20px
-//  text-decoration: underline
+
+// projects
+
+#projects-container
+  margin-top: $margin-height/2
+  display: -webkit-flex
+  display: flex
+  justify-content: space-around
+  -webkit-flex-wrap: wrap
+  flex-wrap: wrap
+  -webkit-align-content: stretch
+  align-content: stretch
+  width: 100%
+
+.project
+  position: relative
+  border-width: 5px
+  border-style: solid
+  border-color: $font-color
+  height: 150px
+  width: 200px
+  margin-top: $margin-height/2
+  overflow: hidden
+
+.project-thumbnail
+  width: 200px
+
+.project-name
+  font-family: $title-font
+  background-color: $font-color
+  padding: 5px
+  color: white
+  font-size: 1em
+  position: absolute
+  top: 0
+  left: 0
+
 
 // content
 
