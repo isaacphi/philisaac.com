@@ -1,5 +1,6 @@
 ---
 layout: base
+title: Phil Isaac
 ---
 
 <!-- INTRO -->
@@ -37,12 +38,16 @@ layout: base
 
 <div id="projects-container">
 
-  <a href="" class="project-selector">
+  {% for project in site.projects %}
+  <a href={{ project.url }} class="project-selector">
     <div class="project">
-      <div class="project-name">Clock</div>
-      <img src="images/project_pics/fuzzface.jpg" class="project-thumbnail" />
+      <div class="project-name">{{ project.title }}</div>
+      <img src={{ project.thumbnail }} class="project-thumbnail" />
     </div>
   </a>
+
+
+  {% endfor %}
 
 </div>
 
@@ -61,79 +66,63 @@ layout: base
   <table>
     <tr>
 	    <td>
-        <a href="mailto:phil@philisaac.com"><i class="fi-mail"></i></a>
-      </td>
-      <td>
-        <a href="mailto:phil@philisaac.com">email</a>
+        <a id="contact-email" href="mailto:phil@philisaac.com"><i class="fi-mail"></i>
+        email</a>
       </td>
     </tr>
     <tr>
 	    <td>
-        <a href="https://twitter.com/isaacphil"><i class="fi-social-twitter"></i></a>
-      </td>
-      <td>
-        twitter
+        <a id="contact-twitter" href="https://twitter.com/phil_fern"><i class="fi-social-twitter"></i>
+        twitter</a>
       </td>
     </tr>
     <tr>
 	    <td>
-    		<a href="https://soundcloud.com/goodresonance"><i class="fi-music"></i></a>
-      </td>
-      <td>
-        soundcloud
+    		<a id="contact-soundcloud" href="https://soundcloud.com/phil_fern"><i class="fi-music"></i>
+        soundcloud</a>
       </td>
     </tr>
     <tr>
 	    <td>
-    		<a href="https://www.facebook.com/isaac.phil"><i class="fi-social-facebook"></i></a>
-      </td>
-      <td>
-        facebook
+    		<a id="contact-facebook" href="https://www.facebook.com/isaac.phil"><i class="fi-social-facebook"></i>
+        facebook</a>
       </td>
     </tr>
     <tr>
 	    <td>
-    		<a href="https://getpocket.com/users/*sso145136415437ac7c/feed/all"><i class="fi-rss"></i></a>
-      </td>
-      <td>
-        pocket
+    		<a id="contact-pocket" href="https://getpocket.com/users/*sso145136415437ac7c/feed/all"><i class="fi-rss"></i>
+        pocket</a>
       </td>
     </tr>
     <tr>
 	    <td>
-    		<a href="https://ca.linkedin.com/in/philisaac"><i class="fi-social-linkedin"></i></a>
-      </td>
-      <td>
-        linkedin
+    		<a id="contact-linkedin" href="https://ca.linkedin.com/in/philisaac"><i class="fi-social-linkedin"></i>
+        linkedin</a>
       </td>
     </tr>
     <tr>
 	    <td>
-    		<a href="https://github.com/isaacphi"><i class="fi-social-github"></i></a>
-      </td>
-      <td>
-        github
+    		<a id="contact-github" href="https://github.com/isaacphi"><i class="fi-social-github"></i>
+        github</a>
       </td>
     </tr>
     <tr>
 	    <td>
-    		<a href="https://www.instagram.com/fern_phil/https://www.instagram.com/fern_phil/"><i class="fi-social-instagram"></i></a>
-      </td>
-      <td>
-        instagram
+    		<a id="contact-instagram" href="https://www.instagram.com/fern_phil/"><i class="fi-social-instagram"></i>
+        instagram</a>
       </td>
     </tr>
     <tr>
 	    <td>
-    		<a href="https://www.flickr.com/photos/147038790@N05/galleries"><i class="fi-social-flickr"></i></a>
-      </td>
-      <td>
-        flickr
+    		<a id="contact-flickr" href="https://www.flickr.com/photos/147038790@N05/"><i class="fi-social-flickr"></i>
+        flickr</a>
       </td>
     </tr>
 
   </table>
 </div>
+
+<!-- BOTTOM -->
 
 <div class="top-squiggles squiggle"></div>
 

@@ -35,12 +35,18 @@ $(function () {
       }
       if(highlightedText != "")
           // text highlighted
-          color = getRandomColour();
+          var color = getRandomColour();
           $('head').append(
             '<style>::selection { background-color : ' + color + '; } ::-moz-selection { background-color : ' + color + '; }</style>'
           );
   });
+  // also just start with one
+  var color = getRandomColour();
+  $('head').append(
+    '<style>::selection { background-color : ' + color + '; } ::-moz-selection { background-color : ' + color + '; }</style>'
+  );
 
+  // temporary hover colour
   $('.nav-item').each(
     function () {
       $(this).hover(
@@ -52,7 +58,15 @@ $(function () {
         }
       )
     }
-  )
+  );
+  $('#contact-email').hover(
+    function () {
+      $(this).css({ 'color': getRandomColour()});
+    },
+    function () {
+      $(this).css({ 'color': '#444'});
+    }
+  );
 
   // cycle color of headers
 	$(".header-picture").each(
