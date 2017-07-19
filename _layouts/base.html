@@ -13,7 +13,8 @@
   <link href='/fonts/source-sans-pro/SourceSansPro-Regular.otf' rel='stylesheet' type='text/css'>
 
 	<!-- ICONS -->
-  <link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="fonts/foundation-icons/foundation-icons.css">
+	<link href='/fonts/foundation-icons/foundation-icons.ttf' rel='stylesheet' type='text/css'>
 
 	<!-- STYLE -->
 	<!--link rel="stylesheet" type="text/css" href="css/style.css" /-->
@@ -27,15 +28,17 @@
 
 <body>
 
-	<div id="left" class="slashes"></div>
-
 	<div id="main">
 
-    {{ content }}
+		<div id="left" class="slashes"></div>
+
+			<div id="background">
+	    	{{ content }}
+			</div>
+
+		<div id="right" class="slashes"></div>
 
 	</div>
-
-	<div id="right" class="slashes"></div>
 
 </body>
 

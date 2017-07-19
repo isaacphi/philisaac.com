@@ -33,15 +33,6 @@ body
   padding: 0
   height: 100%
 
-#left
-  left: 0
-  top: 0
-  text-align: right
-
-#right
-  right: 0
-  top: 0
-
 #main
   width: 50%
   min-height: 90%
@@ -50,8 +41,17 @@ body
   position: relative
   font-family: $body-font
   color: $font-color
-  background-color: white
   text-align: center
+
+#background
+  background-color: white
+
+::selection
+  background: #eee
+
+::-moz-selection
+  background: #eee
+
 
 // styling for pages
 
@@ -61,6 +61,13 @@ body
   margin-top: $margin-height
   width: 10em
   background-color: $font-color
+  // no select
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none  
 
 .header-title
   font-family: $title-font
@@ -78,6 +85,13 @@ body
   font-family: $title-font
   letter-spacing: 10px
   font-size: 2.3em
+  // no select
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
 
 .nav-links
   font-family: $title-font
@@ -111,7 +125,9 @@ body
   overflow: hidden
 
 .project-thumbnail
-  width: 200px
+  width: 100%
+  filter: grayscale(1)
+  -webkit-filter: grayscale(1)
 
 .project-name
   font-family: $title-font
@@ -122,9 +138,25 @@ body
   position: absolute
   top: 0
   left: 0
+  z-index: 1
 
+// contact
 
-// content
+#contact-container
+  padding: $margin-height 0 0 0
+
+table
+  color: $font-color
+  font-size: 1.1em
+  font-family: $body-font
+  display: inline
+  text-align: left
+
+a
+  color: $font-color
+  text-decoration: none
+
+// text
 
 .text
   position: relative
@@ -138,15 +170,24 @@ body
 p
   margin: 7px 0
 
+// slashes
 
-// includes
+#left
+  left: 50%
+  top: 0
+  text-align: left
+
+#right
+  right: 50%
+  top: 0
+  text-align: right
 
 .slashes
   position: absolute
-  z-index: 1
+  z-index: -1
   overflow: hidden
-  width: 50%
-  min-height: 100%
+  width: 100%
+  height: 110%
   font-size: 2.2em
   line-height: 95%
   letter-spacing: -30%

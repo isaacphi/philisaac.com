@@ -13,7 +13,8 @@
   <link href='/fonts/source-sans-pro/SourceSansPro-Regular.otf' rel='stylesheet' type='text/css'>
 
 	<!-- ICONS -->
-  <link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="fonts/foundation-icons/foundation-icons.css">
+	<link href='/fonts/foundation-icons/foundation-icons.ttf' rel='stylesheet' type='text/css'>
 
 	<!-- STYLE -->
 	<!--link rel="stylesheet" type="text/css" href="css/style.css" /-->
@@ -27,37 +28,38 @@
 
 <body>
 
-	<div id="left" class="slashes"></div>
-
 	<div id="main">
 
-    <!-- INTRO -->
+		<div id="left" class="slashes"></div>
+
+			<div id="background">
+	    	<!-- INTRO -->
 
 <img src="/images/psi_mug.png" class="header-picture" id="main-header-picture"/>
 <div class="header-title" id="main-header">Phil Isaac</div>
 
 <!-- NAV -->
 
-<div class="top-squiggles squiggle">~~~</div>
+<div class="top-squiggles squiggle"></div>
 
 <div class="nav-links">
-  <div class="nav-item">Projects</div>
-  <div class="nav-item">Contact</div>
+  <a href="#projects-header-picture"><div class="nav-item">Projects</div></a>
+  <a href="#contact-header-picture"><div class="nav-item">Contact</div></a>
 </div>
 
-<div class="bottom-squiggles squiggle">~~~</div>
+<div class="bottom-squiggles squiggle"></div>
 
 <!-- ABOUT -->
 
 <div class="text">
   <p>Hi there, my name is Phil Isaac and this is my website.</p>
 
-  <p>A little bit about myself: I am just finishing up studying engineering physics at the University of Toronto and co-running a startup company called PheedLoop, also in Toronto.</p>
+  <p>A little bit about myself: I recently finished up studying Engineering Physics at the University of Toronto and co-running a startup web company called PheedLoop.</p>
 
-  <p>I spent a few years living in Vancouver a while ago and can't wait to move back. In my spare time I tend to build things with software and hardware, play ultimate frisbee, bike around, read stuff, cook, and homebrew.</p>
-
-  <p>I made this site because there are a few projects that I wanted to get online. Many of these projects are still in developement but you can check out how they're coming along below. If you think anything is cool and are interested in collaborating, get in touch.</p>
+  <p>In my spare time I like to build things with software and hardware, play ultimate frisbee, fix bikes, cook, and run a homebrewing co-op.</p>
 </div>
+
+<div class="top-squiggles squiggle"></div>
 
 <!-- PROJECTS -->
 
@@ -65,12 +67,17 @@
 <div class="header-title" id="projects-header">Projects</div>
 
 <div id="projects-container">
-  <a href=""><div class="project">
-    <img src="images/project_pics/clock.jpg" class="project-thumb" />
-    <div class="project-name">Clock</div>
-  </div></a>
+
+  <a href="" class="project-selector">
+    <div class="project">
+      <div class="project-name">Clock</div>
+      <img src="images/project_pics/fuzzface.jpg" class="project-thumbnail" />
+    </div>
+  </a>
 
 </div>
+
+<div class="top-squiggles squiggle"></div>
 
 <!-- CONTACT -->
 
@@ -78,18 +85,83 @@
 <div class="header-title" id="contact-header">Contact</div>
 
 <div class="text">
-  In the mean time, you can click the links below to learn more than you ever wanted to know about me. phil@philisaac.com
+  In the mean time, follow the links below to learn more than you ever wanted to know about me. I'm always open to questions and willing to collaborate. phil@philisaac.com
 </div>
 
 <div id="contact-container">
-  <div class="contact-item">email</div>
-  <div class="contact-item">linkedin</div>
+  <table>
+    <tr>
+	    <td>
+        <a href="mailto:phil@philisaac.com"><i class="fi-mail"></i></a>
+      </td>
+      <td>email</td>
+    </tr>
+    <tr>
+	    <td>
+        <a href="https://twitter.com/isaacphil"><i class="fi-social-twitter"></i></a>
+      </td>
+      <td>twitter</td>
+    </tr>
+    <tr>
+	    <td>
+    		<a href="https://soundcloud.com/goodresonance"><i class="fi-music"></i></a>
+      </td>
+      <td>soundcloud</td>
+    </tr>
+    <tr>
+	    <td>
+    		<a href="https://www.facebook.com/isaac.phil"><i class="fi-social-facebook"></i></a>
+      </td>
+      <td>facebook</td>
+    </tr>
+    <tr>
+	    <td>
+    		<a href="https://www.goodreads.com/user/show/44129350-phil"><i class="fi-book"></i></a>
+      </td>
+      <td>goodreads</td>
+    </tr>
+    <tr>
+	    <td>
+    		<a href="https://medium.com/@isaacphil"><i class="fi-social-medium"></i></a>
+      </td>
+      <td>medium</td>
+    </tr>
+    <tr>
+	    <td>
+    		<a href="https://getpocket.com/users/*sso145136415437ac7c/feed/all"><i class="fi-rss"></i></a>
+      </td>
+      <td>pocket</td>
+    </tr>
+    <tr>
+	    <td>
+    		<a href="https://ca.linkedin.com/in/philisaac"><i class="fi-social-linkedin"></i></a>
+      </td>
+      <td>linkedin</td>
+    </tr>
+    <tr>
+	    <td>
+    		<a href="https://github.com/isaacphi"><i class="fi-social-github"></i></a>
+      </td>
+      <td>github</td>
+    </tr>
+  </table>
 </div>
 
+<div class="top-squiggles squiggle"></div>
+
+<div style="height:20px"></div>
+
+<div class="nav-links">
+  <a href="#main-header-picture"><div class="nav-item">Top</div></a>
+</div>
+
+<div style="height:40px"></div>
+
+			</div>
+
+		<div id="right" class="slashes"></div>
 
 	</div>
-
-	<div id="right" class="slashes"></div>
 
 </body>
 
