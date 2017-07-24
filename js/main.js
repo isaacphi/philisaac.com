@@ -4,7 +4,7 @@ $(function () {
   // Populate slashes
   $('.slashes').each(
     function() {
-      $(this).html('<span class="hover-colour">/</span>'.repeat(5000));
+      $(this).html('<span class="hover-colour">/</span>'.repeat(10000));
     }
   );
   $('.squiggle').each(
