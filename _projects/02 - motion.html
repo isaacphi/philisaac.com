@@ -1,0 +1,31 @@
+---
+title: "ML Motion Tracking"
+thumbnail: "/images/thumbnails/motion.png"
+header_picture: "/images/header_pics/motion.png"
+layout: project
+---
+
+<div class="text">
+	As an independent research project, I wrote an efficient machine learning program to track contours. Conventionally, contour tracking is a very computationally difficult problem because most techniques involve two dimensional search of an image. My technique was designed to be able to run in real time on embedded processors. This was achieved by simplifying the problem to a series of one dimensional edge detections cases.
+</div>
+
+<img src="/images/project_pics/webcam.png" class="full-width-pic" />
+
+<div class="caption">
+	Footage of me tracking my water bottle lid. Screenshots are 10 frames apart from a recording at 30 FPS.
+</div>
+
+<div class="text">
+	A contour would be initialized with a series of lines perpendicular to the contour. A 1D edge detection was run on each line, with the edge to be selected influenced though a <a href="https://en.wikipedia.org/wiki/Hidden_Markov_model">hidden markov model</a> (HMM) by the adjacent lines. The HMM is necissary because often several edges are detected on each normal line (as you can see as the red dots in the figure above). It is important to find where the trend is and therefore where the object's actual contour is. The detected edges on each line are joined to approximate a contour. It is updated each frame with the speed of the object and can therefore track it around a scene.
+</div>
+
+<img src="/images/project_pics/contour.png" class="full-width-pic" />
+
+<div class="caption">
+	Diagram of the normal lines used to detect contours. On a given frame update, the algorithm starts with a predicted location based on the objects's velocity (shown with the dotted line) and uses edge detection on each of the normal lines followed by fitting using an HMM to correct the contour.
+</div>
+
+<div class="text">
+	I applied it in real time to a webcam run on a raspberry pi A+ computer and on a traffic dataset provided by <a href="http:
+//www.tft.lth.se/video/co_operation/data_exchange/">Hakan Ardo Aliaksei Laureshyn et al at Lund University</a>
+</div>
