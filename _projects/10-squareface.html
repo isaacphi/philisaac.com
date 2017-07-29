@@ -6,37 +6,38 @@ layout: project
 ---
 
 	<div class="text">
-		Squareface is my first full video game. It is currently in development but a simple demo is online below (it may require up to a minute to load, depending on your connection).
+		Squareface is my first attempt at a video game. Check out a demo below. Arrows to move, space bar to jump. Give it a second to load.
 	</div>
 
-	<div class="header">
-		<a class="highlight" href="/squareface"> > PLAY < </a>
-	</div>
 
-	<div class="text">
-		Squareface is a simple 2D platformer that will be set in a surreal downtown toronto. As time passes, everyday objects transform into puzzles, platforms, and enemies. Get out before you completely lose your mind.
-	</div>
+	<canvas class="emscripten full-width-pic" id="canvas" oncontextmenu="event.preventDefault()">Loading...</canvas>
+	<div class="caption">Squareface demo.</div>
+  <script type='text/javascript'>
+	  var Module = {
+	    TOTAL_MEMORY: 268435456,
+	    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+	    compatibilitycheck: null,
+	    dataUrl: "/squareface/Desktop.data",
+	    codeUrl: "/squareface/Desktop.js",
+	    memUrl: "/squareface/Desktop.mem",
+	  };
+	</script>
+	<script src="/squareface/UnityLoader.js"></script>
 
-	<img src="/images/project_pics/hydrant_sprites.gif" id="project-pic" class="" />
+	<div class="text"></div>
+	<img src="/images/project_pics/hydrant_sprites.gif" class="" />
+	<div class="caption">Fire hydrant enemy.</div>
 
 	<div class="text">
 		It is built in C# using Unity. I am working with Mason Barnes-Crouse on this project. Some early sprite sheets are shown below.
 	</div>
 
-	<img src="/images/project_pics/sf_sprites.png" class="full-width-pic" />
-
+	<img src="/images/project_pics/sf_sprites.png" class="half-width-pic" />
 	<div class="caption">
 		Sprite sheet for squareface.
 	</div>
 
-	<img src="/images/project_pics/hydrant_sprites.png" class="full-width-pic" />
-
-	<div class="caption">
-		Enemy sprite sheet.
-	</div>
-
 	<img src="/images/project_pics/diamond_sprites.png" class="full-width-pic" />
-
 	<div class="caption">
-		Leveled up.
+		Leveled up sprite sheet.
 	</div>
