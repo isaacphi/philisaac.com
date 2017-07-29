@@ -16,16 +16,15 @@ layout: project
 </div>
 
 <div class="text">
-	A contour would be initialized with a series of lines perpendicular to the contour. A 1D edge detection was run on each line, with the edge to be selected influenced though a <a href="https://en.wikipedia.org/wiki/Hidden_Markov_model">hidden markov model</a> (HMM) by the adjacent lines. The HMM is necissary because often several edges are detected on each normal line (as you can see as the red dots in the figure above). It is important to find where the trend is and therefore where the object's actual contour is. The detected edges on each line are joined to approximate a contour. It is updated each frame with the speed of the object and can therefore track it around a scene.
+	A contour would be initialized with a series of lines perpendicular to the contour. A 1D edge detection was run on each line, with the edge to be selected influenced through a <a href="https://en.wikipedia.org/wiki/Hidden_Markov_model">hidden markov model</a> (HMM) by the adjacent lines. The HMM is necessary because often several edges are detected on each normal line (as you can see as the red dots in the figure above). It is important to find where the trend is and therefore where the object's actual contour is. The detected edges on each line are joined to approximate a contour. It is updated each frame with the speed of the object and can therefore track it around a scene.
 </div>
 
 <img src="/images/project_pics/contour.png" class="half-width-pic" />
 
 <div class="caption">
-	Diagram of the normal lines used to detect contours. On a given frame update, the algorithm starts with a predicted location based on the objects's velocity (shown with the dotted line) and uses edge detection on each of the normal lines followed by fitting using an HMM to correct the contour.
+	Diagram of the normal lines used to detect contours. On a given frame update, the algorithm starts with a predicted location based on the object's velocity (shown with the dotted line) and uses edge detection on each of the normal lines followed by fitting using an HMM to correct the contour.
 </div>
 
 <div class="text">
-	I applied it in real time to a webcam run on a raspberry pi A+ computer and on a traffic dataset provided by <a href="http:
-//www.tft.lth.se/video/co_operation/data_exchange/">Hakan Ardo Aliaksei Laureshyn et al at Lund University</a>
+	I applied it in real time to a webcam run on a raspberry pi A+ computer and on a traffic dataset provided by Hakan Ardo Aliaksei Laureshyn et al at Lund University.
 </div>
